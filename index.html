@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Online English 3 Workbooks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Lexend:wght@400;600;700&display=swap">
+<style>
+/* Layout: one centered column with a card per lesson, same look as the lesson pages */
+:root{--bg:#EDF1F7;--surface:#FFFFFF;--ink:#1B2440;--muted:#56617C;--line:#D3DAE6;--accent:#2F5BEA;--accent-text:#2347C4;--ticket:#F4C430;--ticket-ink:#1B2440;
+  --font-display:"Bungee","Arial Black",Impact,sans-serif;--font-body:"Lexend","Segoe UI",system-ui,Arial,sans-serif}
+@media (prefers-color-scheme: dark){:root{--bg:#0F1426;--surface:#171F37;--ink:#E7ECF8;--muted:#A3ADC7;--line:#2E3858;--accent:#7E9CFF;--accent-text:#AFC2FF;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.6}
+.wrap{max-width:720px;margin:0 auto;padding:40px max(16px,env(safe-area-inset-right,0px)) 64px max(16px,env(safe-area-inset-left,0px))}
+h1{font-family:var(--font-display);font-weight:400;font-size:clamp(26px,6vw,36px);line-height:1.1;margin:0 0 8px;letter-spacing:.02em}
+p.lead{color:var(--muted);margin:0 0 28px;max-width:56ch}
+.list{display:grid;gap:14px;padding:0;margin:0;list-style:none}
+a.card{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;color:inherit;text-decoration:none}
+a.card:hover{border-color:var(--accent)}
+a.card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.card strong{display:block;font-size:19px}
+.card span{color:var(--muted);font-size:15px}
+.go{flex:0 0 auto;font-family:var(--font-display);font-size:14px;background:var(--ticket);color:var(--ticket-ink);padding:9px 16px 7px;border-radius:4px;letter-spacing:.03em}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <h1>Online English 3</h1>
+  <p class="lead">Interactive workbooks (CW). Choose your lesson, answer the exercises, and send your answers to your teacher at the end, in <b>My results</b>.</p>
+  <ul class="list">
+    <li><a class="card" href="lesson-8/"><div><strong>Lesson 8</strong><span>Sections 1 to 3, You know how to… and Practice Makes Perfect 2</span></div><span class="go">OPEN</span></a></li>
+    <li><a class="card" href="lesson-9/"><div><strong>Lesson 9</strong><span>Sections 1 to 3, You know how to… and WCP 2</span></div><span class="go">OPEN</span></a></li>
+  </ul>
+</main>
+</body>
+</html>
