@@ -6,33 +6,40 @@
 <title>Online English 3 Workbooks</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Lexend:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap">
 <style>
-/* Layout: one centered column with a card per lesson, same look as the lesson pages */
-:root{--bg:#EDF1F7;--surface:#FFFFFF;--ink:#1B2440;--muted:#56617C;--line:#D3DAE6;--accent:#2F5BEA;--accent-text:#2347C4;--ticket:#F4C430;--ticket-ink:#1B2440;
-  --font-display:"Bungee","Arial Black",Impact,sans-serif;--font-body:"Lexend","Segoe UI",system-ui,Arial,sans-serif}
-@media (prefers-color-scheme: dark){:root{--bg:#0F1426;--surface:#171F37;--ink:#E7ECF8;--muted:#A3ADC7;--line:#2E3858;--accent:#7E9CFF;--accent-text:#AFC2FF;color-scheme:dark}}
+/* Layout: a bright light page with one colorful card per lesson */
+:root{color-scheme:light;--bg:#F4F6FF;--surface:#FFFFFF;--ink:#1D1A39;--muted:#656A8A;--line:#E3E6F5;
+  --blue:#3E63FF;--violet:#8B5CF6;--coral:#FF6B57;--pink:#FF4F9A;--orange:#FF8A1F;--sun:#FFC72C;--sun-ink:#3D2C00;--sun-edge:#E2A800;
+  --font-display:"Sora","Plus Jakarta Sans",system-ui,Arial,sans-serif;--font-body:"Plus Jakarta Sans","Segoe UI",system-ui,Arial,sans-serif}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.6}
-.wrap{max-width:720px;margin:0 auto;padding:40px max(16px,env(safe-area-inset-right,0px)) 64px max(16px,env(safe-area-inset-left,0px))}
-h1{font-family:var(--font-display);font-weight:400;font-size:clamp(26px,6vw,36px);line-height:1.1;margin:0 0 8px;letter-spacing:.02em}
-p.lead{color:var(--muted);margin:0 0 28px;max-width:56ch}
-.list{display:grid;gap:14px;padding:0;margin:0;list-style:none}
-a.card{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;color:inherit;text-decoration:none}
-a.card:hover{border-color:var(--accent)}
-a.card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.card strong{display:block;font-size:19px}
-.card span{color:var(--muted);font-size:15px}
-.go{flex:0 0 auto;font-family:var(--font-display);font-size:14px;background:var(--ticket);color:var(--ticket-ink);padding:9px 16px 7px;border-radius:4px;letter-spacing:.03em}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.6;
+  background-image:radial-gradient(900px 420px at 100% -10%,rgba(255,79,154,.12),transparent 60%),radial-gradient(800px 400px at -10% 0%,rgba(62,99,255,.12),transparent 60%);background-attachment:fixed}
+.wrap{max-width:760px;margin:0 auto;padding:48px max(16px,env(safe-area-inset-right,0px)) 72px max(16px,env(safe-area-inset-left,0px))}
+.badge{display:inline-block;font-family:var(--font-display);font-weight:800;font-size:12px;letter-spacing:.14em;color:#fff;padding:7px 14px;border-radius:999px;background:linear-gradient(120deg,var(--coral),var(--pink) 55%,var(--violet));box-shadow:0 8px 18px -8px rgba(255,79,154,.7)}
+h1{font-family:var(--font-display);font-weight:800;font-size:clamp(30px,7vw,44px);line-height:1.1;letter-spacing:-.02em;margin:16px 0 10px}
+p.lead{color:var(--muted);margin:0 0 30px;max-width:56ch}
+.list{display:grid;gap:16px;padding:0;margin:0;list-style:none}
+a.card{position:relative;display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:20px 22px 20px 26px;color:inherit;text-decoration:none;overflow:hidden;
+  box-shadow:0 14px 34px -18px rgba(40,52,150,.35);transition:transform .15s,box-shadow .15s}
+a.card:hover{transform:translateY(-3px);box-shadow:0 20px 40px -18px rgba(40,52,150,.45)}
+a.card:focus-visible{outline:3px solid var(--c);outline-offset:3px}
+.num{flex:0 0 auto;display:grid;place-items:center;width:54px;height:54px;border-radius:18px;font-family:var(--font-display);font-weight:800;font-size:24px;color:#fff;background:var(--c);box-shadow:0 8px 16px -8px var(--c)}
+.info{flex:1;min-width:0}
+.card strong{display:block;font-family:var(--font-display);font-size:20px}
+.card span.sub{color:var(--muted);font-size:15px}
+.go{flex:0 0 auto;font-family:var(--font-display);font-weight:800;font-size:15px;background:var(--sun);color:var(--sun-ink);padding:10px 18px;border-radius:999px;box-shadow:0 4px 0 var(--sun-edge)}
+@media (max-width:480px){a.card{flex-wrap:wrap}.go{width:100%;text-align:center}}
 </style>
 </head>
 <body>
 <main class="wrap">
+  <span class="badge">TT 3 · CW</span>
   <h1>Online English 3</h1>
-  <p class="lead">Interactive workbooks (CW). Choose your lesson, answer the exercises, and send your answers to your teacher at the end, in <b>My results</b>.</p>
+  <p class="lead">Choose your lesson, answer the exercises, and send your answers to your teacher at the end, in <b>My results</b>.</p>
   <ul class="list">
-    <li><a class="card" href="lesson-8/"><div><strong>Lesson 8</strong><span>Sections 1 to 3, You know how to… and Practice Makes Perfect 2</span></div><span class="go">OPEN</span></a></li>
-    <li><a class="card" href="lesson-9/"><div><strong>Lesson 9</strong><span>Sections 1 to 3, You know how to… and WCP 2</span></div><span class="go">OPEN</span></a></li>
+    <li><a class="card" href="lesson-8/" style="--c:var(--blue)"><span class="num">8</span><span class="info"><strong>Lesson 8</strong><span class="sub">Sections 1 to 3, You know how to… and Practice Makes Perfect 2</span></span><span class="go">Start →</span></a></li>
+    <li><a class="card" href="lesson-9/" style="--c:var(--coral)"><span class="num">9</span><span class="info"><strong>Lesson 9</strong><span class="sub">Sections 1 to 3, You know how to… and WCP 2</span></span><span class="go">Start →</span></a></li>
   </ul>
 </main>
 </body>
